@@ -1,14 +1,27 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import { createI18n } from 'vue-i18n';
 
-import App from './App.vue'
-import router from './router'
+import App from './App.vue';
+import router from './router';
 
-import './assets/main.css'
+import './assets/main.css';
 
-const app = createApp(App)
+// i18n -------------------------------------------------
+import zh from '@/plugins/i18n/zh-tw.js';
+const i18n = createI18n({
+  legacy: false,
+  locale: 'zh-TW',
+  fallbackLocale: 'zh-TW',
+  messages: {
+    'zh-TW': zh
+  }
+});
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+app.use(i18n);
+
+app.mount('#app');
