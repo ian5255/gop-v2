@@ -1,4 +1,8 @@
-
+/*
+  當規則有改動時，需要到vite.config，把eslintrc.enabled改為true，並且重run，完成後再改回false，
+  此舉是為了讓auto-import自動生成 .eslintrc-auto-import.json 文件，
+  待文字重新生成後，需要再關閉，否則eslint可能會抓不到，因為每次打包都會重新生成
+*/
 module.exports = {
   root: true,
   env: {
@@ -9,10 +13,10 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    // 'plugin:vue/vue3-strongly-recommended', // 使用Vue3驗證規則
     'plugin:vue-pug/vue3-recommended',
     'eslint:recommended',
-    '@vue/standard'
+    '@vue/standard',
+    './src/plugins/unpluginAutoImport/.eslintrc-auto-import.json' // `unplugin-auto-import` 生成的規則設定
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
