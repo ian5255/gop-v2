@@ -2,7 +2,7 @@
   "name": "gop-v2",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force --host",
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
@@ -13,11 +13,17 @@
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
     "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/eslint-config-standard": "^8.0.1",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
+    "eslint-plugin-vue-pug": "^0.5.5",
+    "pug": "^3.0.2",
     "vite": "^3.0.1",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-eslint-parser": "^9.1.0"
   },
   "engines": {
     "node": "16.18.0"
