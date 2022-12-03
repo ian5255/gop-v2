@@ -3,7 +3,7 @@
   h1 {{"This is an about page"}}
 </template>
 
-<style>
+<style scoped lang="scss">
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
