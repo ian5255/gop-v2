@@ -1,1 +1,0 @@
-/* eslint-disable */  export default ({'locale':'zh-TW','test':'測試','lang':'中文','account':'帳號','password':'密碼','login':'登入','rememberMe':'記住我','page':{'member':'會員','memberlist':'會員列表','memberid':'會員資訊','config':'配置','demo':'演示','ctrltool':'控制工具','websocket':'Web socket','webrtc':'Web RTC','webrtc2':'Web RTC 2',},'dialog':{'ok':'確定','cancel':'取消',},})

@@ -1,0 +1,24 @@
+{
+  "locale":       ["zh-TW", "en-US"],
+  "test":         ["測試",   "Test~"],
+  "lang":         ["中文",   "English"],
+  "account":      ["帳號",   "Account"],
+  "password":     ["密碼",   "Password"],
+  "login":        ["登入",   "Login"],
+  "rememberMe":   ["記住我", "Remember me"],
+  "page":  {
+    "member":     ["會員", "Member"],
+    "memberlist": ["會員列表", "Member list"],
+    "memberid":   ["會員資訊", "Member info"],
+    "config":     ["配置", "Config"],
+    "demo":       ["演示", "Demo"],
+    "ctrltool":   ["控制工具", "Ctrl tool"],
+    "websocket":  ["Web socket", "Web socket"],
+    "webrtc":     ["Web RTC", "Web RTC"],
+    "webrtc2":    ["Web RTC 2", "Web RTC 2"]
+  },
+  "dialog": {
+    "ok":         ["確定", "Ok"],
+    "cancel":     ["取消", "Cancel"]
+  }
+}

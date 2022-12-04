@@ -4,11 +4,16 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
 import AutoImport from 'unplugin-auto-import/vite'; // 自動引入
+import { GenLocalesPlugin } from './src/plugins/i18n/genLocales.js'; // i18n 文件解析
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    GenLocalesPlugin({
+      path: './src/plugins/i18n',
+      target: 'locales.json'
+    }), // i18n 文件解析
     eslintPlugin({
       include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
       cache: false
