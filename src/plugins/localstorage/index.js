@@ -1,10 +1,11 @@
-import { encrypt, decrypt } from "@/plugins/cryptoJs";
+import { encrypt, decrypt } from '@/plugins/cryptoJs';
 
 const useHash = true;
 
 // key對應表
 export const keys = {
-  token: "GOP_TOKEN" // Token
+  token: 'GOP_TOKEN', // Token
+  locale: 'LOCALE' // locale
 };
 
 // 設定項目
@@ -27,7 +28,7 @@ export const SetHash = (key, value) => {
 export const GetHash = (key) => {
   try {
     const _key = useHash ? encrypt(key) : key;
-    const _data = localStorage.getItem(_key) || "";
+    const _data = localStorage.getItem(_key) || '';
     const _val = useHash ? decrypt(_data) : _data;
     if (_val) {
       return JSON.parse(_val);

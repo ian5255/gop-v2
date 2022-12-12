@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n';
+import { GetHash, keys } from '@/plugins/localstorage';
 
 // 加載語言包
 const LoadLocaleMessages = async () => {
@@ -15,7 +16,7 @@ const LoadLocaleMessages = async () => {
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'zh-TW',
+  locale: GetHash(keys.locale) ? GetHash(keys.locale) : 'zh-TW',
   fallbackLocale: 'zh-TW',
   messages: await LoadLocaleMessages()
 });
