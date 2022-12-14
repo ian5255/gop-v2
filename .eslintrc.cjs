@@ -42,6 +42,8 @@ module.exports = {
     'no-alert': 'error', // alert、confirm 和 prompt 禁止使用
     'arrow-parens': ['error', 'always'], // ()=>箭頭
     curly: 'off', // 可用return 簡寫
-    'vue/no-mutating-props': 'off'
+    'vue/no-mutating-props': 'off',
+    'no-multiple-empty-lines': ['error', { max: 1 }], // 空行最多不能超過2行
+    'no-var': 'error' // 禁用var，用let和const代替
   }
 };
