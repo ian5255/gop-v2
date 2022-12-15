@@ -1,6 +1,7 @@
 <template lang="pug">
 #Home
   p {{t('lang')}}
+  aButton 111
   main
     TheWelcome
   //- <main>
